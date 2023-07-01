@@ -35,3 +35,8 @@ string[] NewArr(string[] arr)
     }
     return newArray;
 }
+
+void ShowArrays(string[] arr1, string[] arr2)
+{
+    Write("[" + string.Join(", ", arr1) + "] -> [" + string.Join(", ", arr2) + "]");
+}
