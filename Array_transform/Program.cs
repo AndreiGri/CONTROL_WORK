@@ -5,16 +5,18 @@ Clear();
 
 string[] CreatedArray()
 {
-    Write("Введите строку из четырёх или более слов: ");
-    string words = ReadLine()!;
-    string[] array = words.Split(' ');
+    string[]array=WriteAndRead("Введите строку из четырёх или более слов: ");
     while (array.Length < 4)
     {
-        Write("Вы ввели менее четырёх слов.\nПопробуйте ещё ввести строку из четырёх или более слов: ");
-        words = ReadLine()!;
-        array = words.Split(' ');
+        array=WriteAndRead("Вы ввели менее четырёх слов.\nПопробуйте ещё ввести строку из четырёх или более слов: ");
     }
     return array;
 }
 
-
+string[] WriteAndRead(string text)
+{
+    Write(text);
+    string words = ReadLine()!;
+    string[] array = words.Split(' ');
+    return array;
+}
