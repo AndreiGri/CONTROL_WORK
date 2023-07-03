@@ -4,8 +4,12 @@ using static System.Console;
 Clear();
 
 string text1 = "Введите строку из четырёх или более слов: ";
-string text2 =
-    "Вы ввели менее четырёх слов.\nПопробуйте ещё ввести строку из четырёх или более слов: ";
+string text2 ="Вы ввели менее четырёх слов." +
+              "\n" +
+              "Попробуйте ещё ввести строку из четырёх или более слов: ";
+string[] a = CreatedArray();
+ShowArrays(a, NewArr(a));
+
 
 string[] CreatedArray()
 {
